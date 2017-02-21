@@ -1,0 +1,18 @@
+<h1>CUPCAKES</h1>
+<div class="productContainer" 
+ng-repeat="cupcake in cupcakeCollection">
+  <div class="cupcake-description">
+    <img src="{{cupcake.image}}" class="cupcakeImage">
+    <div ng-show="!cupcake.isEditing">
+      <b>{{cupcake.name}}</b>
+      <b> - {{cupcake.price}}$</b>
+      <i>{{cupcake.description}}</i>
+    </div>
+    <div ng-show="cupcake.isEditing">
+      <input type="text" ng-model="cupcake.name"/>
+      <input type="text" ng-model="cupcake.price" />
+      <input type="text" ng-model="cupcake.description"/>
+    </div>
+  </div>
+  <button ng-click="order(cupcake.name)">Order</button>
+</div>

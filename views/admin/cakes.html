@@ -1,0 +1,21 @@
+<h1>CAKES</h1>
+<div class="productContainer" 
+ng-repeat="cake in cakeCollection">
+  <div class="cake-description">
+    <img src="{{cake.image}}" class="cakeImage">
+    <div ng-show="!cake.isEditing">
+      <b>{{cake.name}}</b>
+      <b> - {{cake.price}}$</b>
+      <i>{{cake.description}}</i>
+    </div>
+    <div ng-show="cake.isEditing">
+      <input type="text" ng-model="cake.name"/>
+      <input type="text" ng-model="cake.price"/>
+      <input type="text" ng-model="cake.description"/>
+    </div>
+  </div>
+  <button ng-click="order(cake.name)">Order</button>
+  <button ng-click="edit(cake)">Edit</button>
+  <button ng-click="submit(cake)">Submit</button>
+  <button ng-click="delete(cake)">Delete</button>
+</div>

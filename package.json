@@ -1,0 +1,26 @@
+{
+  "name": "stock-exchange",
+  "version": "0.0.2",
+  "description": "none",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "none",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-less": "^1.4.0"
+  }
+}

@@ -1,0 +1,15 @@
+<div class="productContainer" 
+ng-repeat="product in productCollection">
+  <div class="product-description">
+    <img src="{{product.image}}" class="productImage">
+    <div ng-show="!product.isEditing">
+      <b>{{product.name}}</b>
+      <i>{{product.description}}</i>
+    </div>
+    <div ng-show="product.isEditing">
+      <input type="text" ng-model="product.name"/>
+      <input type="text" ng-model="product.description"/>
+    </div>
+  </div>
+  <button ng-click="readMore(product.name)">Read more</button>
+</div>

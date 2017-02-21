@@ -1,0 +1,70 @@
+<h1>CUPCAKES</h1>
+<div class="productContainer" 
+ng-repeat="cupcake in cupcakeCollection">
+  <div class="cupcake-description">
+    <img src="{{cupcake.image}}" class="cupcakeImage">
+    <div ng-show="!cupcake.isEditing">
+      <b>{{cupcake.name}}</b>
+      <b> - {{cupcake.price}}$</b>
+      <i>{{cupcake.description}}</i>
+    </div>
+    <div ng-show="cupcake.isEditing">
+      <input type="text" ng-model="cupcake.name"/>
+      <input type="text" ng-model="cupcake.price" />
+      <input type="text" ng-model="cupcake.description"/>
+    </div>
+  </div>
+  <button ng-click="order(cupcake.name)">Order</button>
+  <button ng-click="edit(cupcake)">Edit</button>
+  <button ng-click="submit(cupcake)">Submit</button>
+  <button ng-click="delete(cupcake)">Delete</button>
+</div>
+
+<form name="productForm" ng-submit="add()" novalidate="true">
+  <div class="productContainer">
+    <h2>Adding new product</h2>
+      <div class="error" 
+      ng-show="productForm.$submitted && productForm.$dirty && productForm.$invalid">
+        Please check data you entered
+      </div>
+    <div>
+      <label>
+      Name
+      <p class="error" 
+      ng-show="productForm.productName.$touched &&productForm.productName.$invalid">Name is invalid</p>
+      <input class="form-control" 
+      ng-model="newProduct.name"
+      ng-required="true"
+      ng-pattern="/^\w{3,20}$/"
+      name="productName" id="productName" />
+      </label>
+    </div>
+    <div>
+      <label>
+      Price
+      <p class="error" 
+      ng-show="productForm.productPrice.$touched &&productForm.productPrice.$invalid">Price is invalid</p>
+      <input class="form-control" 
+      ng-model="newProduct.price"
+      ng-required="true"
+      ng-pattern="/^\d{1,4}$/"
+      name="productPrice" id="productPrice" />
+      </label>
+    </div>
+    <div>
+      <label>
+      Description
+      <p class="error" 
+      ng-show="productForm.productDescription.$touched &&productForm.productDescription.$invalid">Description is invalid</p>
+      <input class="form-control" 
+      ng-model="newProduct.description"
+      ng-required="true"
+      name="productDescription" id="productDescription" />
+      </label>
+    </div>
+    <div>
+      <button type="submit" 
+      class="btn btn-primary" id="createProduct">Create new product</button>
+    </div>
+  </div>
+  </form>

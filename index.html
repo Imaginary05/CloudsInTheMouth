@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Sergey Chygrynets">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Clouds in the mouth</title>
+  <link rel="stylesheet" type="text/css" href="css/style-top-bottom.css">
+  <link rel="stylesheet" type="text/css" href="css/style-content.css">
+  <link rel="stylesheet" type="text/css" href="css/style-systemEvents.css">
+</head>
+
+<body class="content" ng-app="cloudsInTheMouth">
+  <header class="clearfix">
+    <div class="logo-menu clearfix">
+      <a class="to_nav" tabindex="1" href="#primary_nav">
+        <svg class="menu-icon" tabindex="1" version="1.1" viewBox="0 0 32 32"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
+      </a>
+      <img id="upper-divider-main" src="css/images/header/upper-divider.png" alt="upper-divider">
+    </div>
+  </header>
+  <main class="main-section">
+    <div class="greet clearfix"> 
+      <div class="greet-text">
+        <p class="greet-address">Dear guests!</p> Here you can order and arrange a variety of festive sweets that will please both kids and adults, friends and parents, and will be the perfect gift for any occasion.
+      </div>
+      <img id="greet-image"src="images/pick_to_header.png"/ alt="greeting-image">
+    </div>
+    <img id="drops-image"src="css/images/main/drops.png" alt="drops-image" width="100%"/>
+    <div ui-view class="productsSection">
+    </div>  
+  <!-- Primary nav after greeting text -->
+  <nav id="primary_nav">
+    <ul>
+      <li><a class="main-item" tabindex="1" >Production</a>
+        <ul class="sub-menu">
+          <li><a class="sub-item" tabindex="1" ui-sref="cupcakes">Cupcakes</a></li>
+          <li><a class="sub-item" tabindex="1" ui-sref="cakes">Cakes</a></li>
+          <li><a class="sub-item" tabindex="1" ui-sref="cakepops">Cake pops</a></li>
+        </ul>
+      </li>
+      <li><a class="main-item" tabindex="1" ui-sref="fillings">Fillings</a>
+        <ul class="sub-menu">
+          <li><a class="sub-item" tabindex="1" href="">For cupcakes</a></li>
+          <li><a class="sub-item" tabindex="1" href="">For cakes</a></li>
+          <li><a class="sub-item" tabindex="1" href="">For cake pops</a></li>
+        </ul>
+      </li>
+      <li><a class="main-item" tabindex="1" href="about:blank">Delivery</a></li>
+      <li><a class="main-item" tabindex="1" ui-sref="home">Contacts</a></li>
+      <li class="top"><a tabindex="1" ui-sref="home">Top</a></li>
+    </ul>
+  </nav>
+</main>
+
+<footer class="clearfix">
+  <div class="social-nets">vk fb tw L Inst</div>
+  <div class="copyrights">Copyright &copy;2016 Sergey Chygrynets</div>
+</footer>
+<!--  <script id="productTemplate" type="text/template">
+  <img src="<%= imgSrc %>" class="productImage">
+  <b><%= productName %></b>
+  <i><%= productDescription %></i>
+  <button class="js-readMore">Read More</button>
+  <button class="js-edit">Edit</button>
+  <button class="js-delete" data-name="<%= productName %>">Delete</button>
+  </script>
+  <script id="fillingTemplate" type="text/template">
+  <img src="<%= imgSrc %>" class="fillingImage">
+  <b><%= fillingName %></b>
+  <i><%= fillingDescription %></i>
+  <button class="js-readMore">Read More</button>
+  <button class="js-edit">Edit</button>
+  <button class="js-delete" data-name="<%= fillingName %>">Delete</button>
+</script> -->
+<!--
+<script id="productEditTemplate" type="text/template">
+<label>Name
+<input id="productName" value="<%= productName %>" />
+</label>
+<label>Description
+<input id="productDescription" value="<%= productDescription %>" />
+</label>
+<button class="js-submit">Submit</button>
+</script>
+<script id="fillingEditTemplate" type="text/template">
+<label>Name
+<input id="fillingtName" value="<%= fillingName %>" />
+</label>
+<label>Description
+<input id="fillingDescription" value="<%= fillingDescription %>" />
+</label>
+<button class="js-submit">Submit</button>
+</script>
+
+<script id="productDetailsTemplate" type="text/template">
+<div class="well">
+<button class="js-home">HOME</button>YOU BROKE IT!
+</div>
+</script>
+-->
+
+  <!--<script src="js/jQuery.js"></script>
+  <script src="js/underscore.js"></script>
+  <script src="js/helpers.js"></script>
+  <script src="js/view.js"></script>
+  <script src="js/baseModel.js"></script>
+  <script src="js/baseCollectionController.js"></script>
+  <script src="js/productModel.js"></script>
+  <script src="js/fillingModel.js"></script>
+  <script src="js/productSectionController.js"></script>
+  <script src="js/productController.js"></script>
+  <script src="js/fillingController.js"></script>
+  <script src="js/productCollection.js"></script>
+  <script src="js/fillingCollection.js"></script>
+  <script src="js/productCollectionController.js"></script>
+  <script src="js/fillingCollectionController.js"></script>
+  <script src="js/app.js"></script> -->
+
+
+  <script src="js/angular/support/angular.min.js"></script>
+  <script src="js/angular/support/angular-ui-router.js"></script>
+  <script src="js/angular/app.js"></script>
+  <script src="js/angular/controllers/login-controller.js"></script> 
+  <script src="js/angular/controllers/products-collection-controller.js"></script>
+  <script src="js/angular/controllers/fillings-collection-controller.js"></script>
+  <script src="js/angular/controllers/cupcakes-controller.js"></script>
+  <script src="js/angular/controllers/cakes-controller.js"></script>
+  <script src="js/angular/controllers/cakepops-controller.js"></script>
+  <script src="js/angular/services/product-service.js"></script>
+  <script src="js/angular/services/filling-service.js"></script>
+  <script src="js/angular/services/cupcakes-service.js"></script>
+  <script src="js/angular/services/cakes-service.js"></script>
+  <script src="js/angular/services/cakepops-service.js"></script>
+
+
+</body>
+</html>

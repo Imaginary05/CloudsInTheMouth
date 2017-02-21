@@ -1,0 +1,15 @@
+<h1>FILLINGS TO SELL</h1>
+<div class="productContainer" 
+ng-repeat="filling in fillingCollection">
+  <div class="filling-description">
+    <img src="{{filling.image}}" class="fillingImage">
+    <div ng-show="!filling.isEditing">
+      <b>{{filling.name}}</b>
+      <i>{{filling.description}}</i>
+    </div>
+    <div ng-show="filling.isEditing">
+      <input type="text" ng-model="filling.name"/>
+      <input type="text" ng-model="filling.description"/>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<h1>CAKEPOPS</h1>
+<div class="productContainer" 
+ng-repeat="cakepop in cakepopCollection">
+  <div class="cakepop-description">
+    <img src="{{cakepop.image}}" class="cakepopImage">
+    <div ng-show="!cakepop.isEditing">
+      <b>{{cakepop.name}}</b>
+      <b> - {{cakepop.price}}$</b>
+      <i>{{cakepop.description}}</i>
+    </div>
+    <div ng-show="cakepop.isEditing">
+      <input type="text" ng-model="cakepop.name"/>
+      <input type="text" ng-model="cakepop.price"/>
+      <input type="text" ng-model="cakepop.description"/>
+    </div>
+  </div>
+</div>

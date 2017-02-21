@@ -1,0 +1,4 @@
+.productContainer.is-loading, .fillingContainer.is-loading {
+  opacity: 0.4;
+  background-color: grey;
+}
